@@ -36,7 +36,7 @@
 ## 🛠 Built With <a name="built-with"></a>
 <img src="./uml_class_diagram.png">
 ### Tech Stack <a name="tech-stack"></a>
-- Ruby
+
 <details>
   <summary>Client</summary>
   <ul>
