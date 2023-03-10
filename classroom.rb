@@ -11,4 +11,8 @@ class Classroom
     @students.push(student)
     student.classroom = self
   end
+
+  # class ShowStudents
+  #   @students
+  # end
 end
