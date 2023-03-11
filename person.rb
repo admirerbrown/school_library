@@ -4,6 +4,7 @@ class Person < Nameable
   attr_reader :id, :rentals
   attr_accessor :name, :age
 
+  # rubocop:disable Style/ClassVars
   @@all_rentals = []
 
   def initialize(age, name = 'unknown', parent_permission: true)
@@ -39,4 +40,5 @@ class Person < Nameable
   def self.all_rentals
     @@all_rentals
   end
+  # rubocop:enable Style/ClassVars
 end

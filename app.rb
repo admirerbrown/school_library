@@ -51,16 +51,17 @@ def create_student
   loop do
     puts 'Age:'
     age = gets.chomp
+
     puts 'Name:'
     name = gets.chomp
+
     puts 'Has parent permission? [Y/N]:'
     parent_permission = gets.chomp
-    puts 'classroom type eg.Math class:'
+
+    puts 'Classroom type eg. Math class:'
     classroom_type = gets.chomp
 
-    break unless age.empty? || name.empty? || parent_permission.empty? || classroom_type.empty?
-
-    puts 'Please enter a valid response for all fields'
+    break unless age.empty? || name.empty? || classroom_type.empty? || parent_permission.empty?
   end
 
   resume(age, name, parent_permission, classroom_type)
@@ -129,26 +130,6 @@ def all_people
   people
 end
 
-# create rental block...
-def create_rental
-  book_list = Book.saved_books
-  persons = all_people
-  if book_list.empty?
-    puts 'No books! please add a book'
-  elsif persons.empty?
-    puts 'puts please go back and create a person to rent the book'
-  else
-    puts 'Select a book from the following list by number'
-
-    book_list.each_with_index do |book, index|
-      puts "#{index}) Title: #{book.title}, Author: #{book.author}"
-    end
-    book_num = gets.chomp.to_i
-
-    add_rentee(book_list, persons, book_num)
-  end
-end
-
 def add_rentee(book_list, persons, book_num)
   rented_book = book_list[book_num]
 
@@ -165,6 +146,26 @@ def add_rentee(book_list, persons, book_num)
   receiver.add_rental(rented_book, date_rented)
 
   puts 'Rental created successfully'
+end
+
+# create rental block...
+def create_rental
+  book_list = Book.saved_books
+  persons = all_people
+  if book_list.empty?
+    puts 'No books! please add a book'
+  elsif persons.empty?
+    puts 'puts please go back and create a person to rent the book'
+  else
+    puts 'Select a book from the following list by number'
+
+    book_list.each_with_index do |book, index|
+      puts "#{index}) Title: #{book.title}, Author: #{book.author}"
+    end
+    book_num = gets.chomp.to_i
+
+  end
+  add_rentee(book_list, persons, book_num)
 end
 
 def user_rentals
