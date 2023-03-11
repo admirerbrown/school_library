@@ -99,6 +99,7 @@ Install this project with:
 ### Usage
 
 - Use this project as a step to learning to practice building backend applications with Ruby and OOP concepts.
+- >run "ruby main.rb from the terminal"
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
