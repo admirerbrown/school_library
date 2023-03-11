@@ -159,13 +159,27 @@ def add_rentee(book_list, persons, book_num)
 
   rentee = gets.chomp.to_i
   receiver = persons[rentee][:obj]
-  puts receiver
 
   puts 'Date:'
   date_rented = gets.chomp
+  receiver.add_rental(rented_book, date_rented)
 
-  Rental.new(date_rented, receiver, rented_book)
   puts 'Rental created successfully'
 end
 
+def user_rentals
+  puts 'ID of person:'
+  id = gets.chomp.to_i
 
+  # Find all rentals for the person with the given ID
+  rentals = Person.all_rentals.select { |rental| rental.person.id == id }
+
+  if rentals.empty?
+    puts "No rentals found for person with ID #{id}."
+  else
+    # Print details of each rental
+    rentals.each do |rental|
+      puts "Date: #{rental.date}, Book: #{rental.book.title} by #{rental.book.author}"
+    end
+  end
+end

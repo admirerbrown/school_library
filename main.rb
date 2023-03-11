@@ -25,6 +25,8 @@ def director(user_answer)
     create_book
   when 5
     create_rental
+  when 6
+    user_rentals
   end
 end
 
