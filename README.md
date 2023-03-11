@@ -7,9 +7,8 @@
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 School Library ](#-school-library-)
   - [🛠 Built With ](#-built-with-)
-    - [Tech Stack ](#tech-stack-)
+  - [🛠 Tech Stack ](#-tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -35,7 +34,8 @@
 
 ## 🛠 Built With <a name="built-with"></a>
 <img src="./uml_class_diagram.png">
-### Tech Stack <a name="tech-stack"></a>
+
+## 🛠 Tech Stack <a name="tech-stack"></a>
 
 <details>
   <summary>Client</summary>
@@ -55,9 +55,9 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+<!-- ## 🚀 Live Demo <a name="live-demo"></a> -->
 
-- [Not Available]()
+<!-- - [Not Available]() -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
