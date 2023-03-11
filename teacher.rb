@@ -4,7 +4,7 @@ class Teacher < Person
   @teachers = []
 
   def initialize(person, specialization)
-    super(person)
+    super(person.age, person.name)
     @specialization = specialization
   end
 

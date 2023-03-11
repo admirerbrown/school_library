@@ -4,7 +4,7 @@ class Student < Person
   attr_reader :classroom
 
   def initialize(person, classroom)
-    super(person)
+    super(person.age, person.name)
     @classroom = classroom
   end
 
